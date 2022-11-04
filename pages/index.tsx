@@ -1,3 +1,4 @@
+import { Listbox } from '@headlessui/react'
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -52,6 +53,10 @@ const Home: NextPage = () => {
           </a>
         </div>
       </main>
+
+      <Listbox>
+        <Listbox.Label>Foobar</Listbox.Label>
+      </Listbox>
 
       <footer className={styles.footer}>
         <a
