@@ -1,6 +1,8 @@
 # Vite escapes the Bazel sandbox?
 
-Problem: the build succeeds even if Vite dependencies (referenced in the `vite.config.js` file) are not provided as a dependency in the `BUILD.bazel` file. 
+Problem: the build succeeds even if Vite dependencies (referenced in the `vite.config.js` file) are not provided as a dependency in the `BUILD.bazel` file. See:
+
+https://github.com/henkerik/repro_rules_js_362/blob/main/BUILD.bazel#L13
 
 Steps to reproduce:
 
@@ -24,6 +26,11 @@ Without running the `pnpm install` step, the build will fail as expected. Also, 
 
 1. Start VS Code and start the `Dev Container: Rebuild container` command
 2. Open a terminal in VS Code (shift + control + `)
+
+** Note: On x86_64 hardware, change these lines:
+
+- https://github.com/henkerik/repro_rules_js_362/blob/main/BUILD.bazel#L31
+- https://github.com/henkerik/repro_rules_js_362/blob/main/.devcontainer/devcontainer/Dockerfile#L6
 
 ## Steps tried:
 
