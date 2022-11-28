@@ -1,0 +1,9 @@
+{
+    "name": "Frontend Monorepo",
+    "build": {
+		"dockerfile": "devcontainer/Dockerfile"
+	},
+	// --privileged is needed if we want to use the `linux-sandbox`
+	"runArgs": ["--privileged"]
+}
+  

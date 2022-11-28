@@ -1,2 +1,6 @@
 test --test_output=errors
 common --incompatible_allow_tags_propagation
+
+build --nolegacy_external_runfiles
+run --nolegacy_external_runfiles
+test --nolegacy_external_runfiles
